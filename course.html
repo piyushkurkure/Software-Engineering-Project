@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color:lightgreen;
+  color: white;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+h2{
+  color: lightgreen;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:lightgrey;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="mainmenu.html">Main Menu</a>
+  <a href="personal.html">Personal Details</a>
+  <a href="course.html">Course Registration</a>
+  <a href="#">Major Details</a>
+  <a href="#">Faculty Details</a>
+  <a href="#">View Grades</a>
+  <a href="#">Settings</a>
+  <a href="#">Help</a>
+</div>
+
+<div class="main">
+  <h2>Course Registration</h2>
+  <table id="t01">
+    <tr>
+      <th>Cid</th>
+      <th>No. of Seats</th> 
+      <th>Schedule No.</th>
+      <th>Lecture Time/Date</th>
+      <th>Course Location</th>
+      <th>Instructor Name</th>
+      <th>No. of Units</th>
+      <th>Pre-requisites</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>CS501</td>
+      <td>40</td>
+      <td>1</td>
+      <td>2:00pm-3:30pm / TTH</td>
+      <td>GMCS402</td>
+      <td>Prof. King</td>
+      <td>3</td>
+      <td>CS101</td>
+      <td><button type="button" onclick="alert('Add class')">Add</button></td>
+  </table>
+</div>
+   
+</body>
+</html> 
+

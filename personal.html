@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table.tcourse tr:nth-child(even) {
+  background-color: #eee;
+}
+table.tcourse tr:nth-child(odd) {
+ background-color: #fff;
+}
+table.tcourse th {
+  background-color:lightgreen;
+  color: white;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+h2{
+  color: lightgreen;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:lightgrey;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="mainmenu.html">Main Menu</a>
+  <a href="personal.html">Personal Details</a>
+  <a href="course.html">Course Registration</a>
+  <a href="#">Major Details</a>
+  <a href="#">Faculty Details</a>
+  <a href="#">View Grades</a>
+  <a href="#">Settings</a>
+  <a href="#">Help</a>
+</div>
+
+<div class="main">
+  <h2>Personal</h2>
+  <form action="#">
+    <fieldset>
+      <legend>Personal Details</legend>
+      Student Id:<br>
+      <input type="text" name="studentid" value="">
+      <br>
+      Student Name:<br>
+      <input type="text" name="studentname" value="">
+      <br>
+      Phone Number:<br>
+      <input type="text" name="phonenumber" value="">
+      <br>
+      Address:<br>
+      <input type="text" name="address" value="">
+      <br>
+      Date of Birth:<br>
+      <input type="text" name="dob" value="">
+      <br>
+      Major:<br>
+      <input type="text" name="major" value="">
+      <br>
+      <br>
+      Courses Completed:<br>
+      <br>
+      <table class="tcourse">
+          <tr>
+            <th>Cid</th>
+            <th>Title</th> 
+            <th>Semester</th>
+            <th>Units</th>
+            <th>Grade</th>
+          </tr>
+          <tr>
+            <td>CS501</td>
+            <td>Data Structures</td>
+            <td>1</td>
+            <td>3</td>
+            <td>A</td>
+          </tr>
+          
+        </table>
+        <br>
+      Courses Currently Enrolled:<br>
+      <br>
+      <table class="tcourse">
+            <th>Cid</th>
+            <th>Title</th> 
+            <th>Semester</th>
+            <th>Units</th>
+            <th>Grade</th>
+          </tr>
+          <tr>
+            <td>CS502</td>
+            <td>Algorithms</td>
+            <td>2</td>
+            <td>3</td>
+            <td>-</td>
+          </tr>
+          
+        </table>
+        <br>
+        <button type="button" onclick="alert('Information Updated!')">UPDATE</button>
+    </fieldset>
+  </form>
+</div>
+   
+</body>
+</html> 
+
